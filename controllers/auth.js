@@ -14,22 +14,22 @@ authRouter.use('/login', async (req, res) => {
     const { username, password } = body;
 
     //se busca el usuario por su username
-    const userFinded = await User.findAll({where:{username }});
+    const userFound = await User.findAll({where:{username }});
 
     //se verifica que el usuario no sea null y se compara la passwordHash
-    const passwordCorrect = userFinded === null
+    const passwordCorrect = userFound === null
     ? false
-    : await bcrypt.compare(password, userFinded[0]['dataValues'].passwordHash);
+    : await bcrypt.compare(password, userFound[0]['dataValues'].passwordHash);
 
     //si alguno de los campos necesarios está mal se responde un json con un mensaje
-    if(!(userFinded && passwordCorrect)) {
+    if(!(userFound && passwordCorrect)) {
         return res.status(401).json({
             error: 'invalid username or password'
         });
     }
     
     //se crea un usuario para el token, un token y se responde un json con un mensaje y el token
-    const userForToken = {username, id: userFinded.idUsers};
+    const userForToken = {username, id: userFound.idUsers};
           
     const accessToken = generateAccessToken(userForToken);
           
