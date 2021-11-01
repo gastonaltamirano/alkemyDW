@@ -1,0 +1,11 @@
+PUT http://localhost/movies
+Content-Type: application/json
+Authorization: autorizacion
+
+{
+    "id": 1,
+    "content": {
+        "title": "nuevonombreactualizado",
+        "score": 3.5
+    }
+}

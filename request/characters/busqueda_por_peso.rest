@@ -1,0 +1,2 @@
+GET http://localhost/characters/?weight=345
+Authorization: autorizacion

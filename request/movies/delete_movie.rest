@@ -1,0 +1,7 @@
+DELETE http://localhost/movies
+Content-Type: application/json
+Authorization: autorizacion
+
+{
+    "id": 2
+}

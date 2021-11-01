@@ -1,0 +1,8 @@
+POST http://localhost/movies/addgenre
+Authorization: autorizacion
+Content-Type: application/json
+
+{
+    "name": "terror",
+    "image": "imagenterror"
+}

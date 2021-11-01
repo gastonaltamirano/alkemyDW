@@ -1,0 +1,2 @@
+GET http://localhost/characters/8
+Authorization: autorizacion

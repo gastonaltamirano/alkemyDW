@@ -1,0 +1,2 @@
+GET http://localhost/characters/?movie=2
+Authorization: autorizacion

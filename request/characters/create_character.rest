@@ -1,0 +1,12 @@
+POST http://localhost/characters/
+Content-Type: application/json
+Authorization: autorizacion
+
+{
+    "image": "image",
+    "name": "name",
+    "age": 23,
+    "weight": 100,
+    "history": "history",
+    "movies": []
+}

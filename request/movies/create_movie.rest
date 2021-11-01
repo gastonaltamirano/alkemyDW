@@ -1,0 +1,11 @@
+POST http://localhost/movies
+Content-Type: application/json
+Authorization: autorizacion
+
+{
+    "image": "nuevopersonajeimg",
+    "title": "peliculaterror1",
+    "creationDate": "1996-05-06",
+    "score": 4.2,
+    "genre": 1
+}

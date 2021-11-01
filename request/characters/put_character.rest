@@ -1,0 +1,11 @@
+PUT http://localhost/characters
+Content-Type: application/json
+Authorization: autorizacion
+
+{
+    "id": 1,
+    "content": {
+        "name": "nuevonombreactualizado",
+        "weight": 35
+    }
+}
